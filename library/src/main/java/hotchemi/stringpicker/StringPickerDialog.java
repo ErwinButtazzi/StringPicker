@@ -44,7 +44,7 @@ public class StringPickerDialog extends DialogFragment {
         builder.setPositiveButton(params.getString(getValue(R.string.string_picker_dialog_ok)), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                mListener.onClick(stringPicker.getCurrentValue());
+                mListener.onClick(stringPicker.getCurrent());
             }
         });
         builder.setNegativeButton(params.getString(getValue(R.string.string_picker_dialog_cancel)), null);
@@ -57,7 +57,7 @@ public class StringPickerDialog extends DialogFragment {
     }
 
     public interface OnClickListener {
-        void onClick(final String value);
+        void onClick(final Integer value);
     }
 
 }
